@@ -78,15 +78,18 @@ a.explore-btn:hover {
 
 /* Hero Split Layout */
 .hero-section {
-    height: 100%; /* Restrict to viewport height */
+    height: 100%;
+    /* Restrict to viewport height */
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; /* Space out children to prevent overlap */
+    justify-content: space-between;
+    /* Space out children to prevent overlap */
     position: relative;
     overflow: hidden;
-    padding: 10vh 5% 2vh 5%; /* Top and bottom padding */
+    padding: 10vh 5% 2vh 5%;
+    /* Top and bottom padding */
 }
 
 .hero-section .bg-image-container {
@@ -114,7 +117,8 @@ a.explore-btn:hover {
     position: relative;
     z-index: 2;
     flex-wrap: wrap;
-    flex: 1; /* Takes up the middle space, pushing scroll-explore to bottom */
+    flex: 1;
+    /* Takes up the middle space, pushing scroll-explore to bottom */
 }
 
 .hero-left {
@@ -149,7 +153,8 @@ a.explore-btn:hover {
     display: block;
     max-width: 450px;
     width: 80vw;
-    max-height: 15vh; /* Crucially shrink logo on short screens */
+    max-height: 15vh;
+    /* Crucially shrink logo on short screens */
     height: auto;
     object-fit: contain;
 }
@@ -164,7 +169,8 @@ a.explore-btn:hover {
     cursor: pointer;
     z-index: 10;
     transition: all 0.3s ease;
-    margin-bottom: 12vh; /* Moved slightly upwards, stays well above nav */
+    margin-bottom: 16vh;
+    /* Moved further upwards, stays well above nav */
 }
 
 .scroll-explore:hover {
@@ -241,7 +247,8 @@ a.explore-btn:hover {
 
 
 .hero-description {
-    font-size: clamp(0.9rem, 2vh, 1.4rem); /* Dynamically shrinks if height is small */
+    font-size: clamp(0.9rem, 2vh, 1.4rem);
+    /* Dynamically shrinks if height is small */
     line-height: 1.5;
     color: #ffffff;
     max-width: 700px;
