@@ -78,7 +78,7 @@ a.explore-btn:hover {
 
 /* Hero Split Layout */
 .hero-section {
-    min-height: 100vh;
+    height: 100%; /* Restrict to viewport height to prevent hiding absolute elements */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -86,7 +86,7 @@ a.explore-btn:hover {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    padding: 0 5% 180px 5%; /* Padding bottom ensures content never overlaps with scroll-explore */
+    padding: 0 5%;
 }
 
 .hero-section .bg-image-container {
@@ -116,6 +116,7 @@ a.explore-btn:hover {
     z-index: 2;
     /* Above overlay */
     flex-wrap: wrap;
+    transform: translateY(-8vh); /* Moves content slightly above across all devices */
 }
 
 .hero-left {
@@ -157,8 +158,7 @@ a.explore-btn:hover {
 /* Scroll to Explore Indicator */
 .scroll-explore {
     position: absolute;
-    bottom: 140px;
-    /* Moved up to clear the navigation bar and slightly upside */
+    bottom: 120px; /* Safe distance from bottom, clearly visible */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
