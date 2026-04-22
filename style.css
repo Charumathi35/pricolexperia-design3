@@ -78,15 +78,15 @@ a.explore-btn:hover {
 
 /* Hero Split Layout */
 .hero-section {
-    height: 100%; /* Restrict to viewport height to prevent hiding absolute elements */
+    height: 100%; /* Restrict to viewport height */
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Space out children to prevent overlap */
     position: relative;
     overflow: hidden;
-    padding: 0 5%;
+    padding: 10vh 5% 2vh 5%; /* Top and bottom padding */
 }
 
 .hero-section .bg-image-container {
@@ -107,16 +107,14 @@ a.explore-btn:hover {
 
 .hero-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 1400px;
-    gap: 4rem;
     position: relative;
     z-index: 2;
-    /* Above overlay */
     flex-wrap: wrap;
-    transform: translateY(-8vh); /* Moves content slightly above across all devices */
+    flex: 1; /* Takes up the middle space, pushing scroll-explore to bottom */
 }
 
 .hero-left {
@@ -147,20 +145,18 @@ a.explore-btn:hover {
     margin-bottom: 1.9rem;
 }
 
-/* Site Logo Image */
 .site-logo {
     display: block;
     max-width: 450px;
+    width: 80vw;
+    max-height: 15vh; /* Crucially shrink logo on short screens */
     height: auto;
     object-fit: contain;
 }
 
 /* Scroll to Explore Indicator */
 .scroll-explore {
-    position: absolute;
-    bottom: 120px; /* Safe distance from bottom, clearly visible */
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -168,10 +164,11 @@ a.explore-btn:hover {
     cursor: pointer;
     z-index: 10;
     transition: all 0.3s ease;
+    margin-bottom: 8vh; /* Stays above nav */
 }
 
 .scroll-explore:hover {
-    transform: translateX(-50%) translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .scroll-text {
@@ -244,11 +241,11 @@ a.explore-btn:hover {
 
 
 .hero-description {
-    font-size: 1.4rem;
-    line-height: 1.6;
+    font-size: clamp(0.9rem, 2vh, 1.4rem); /* Dynamically shrinks if height is small */
+    line-height: 1.5;
     color: #ffffff;
-    /* Changed to White as per request */
     max-width: 700px;
+    width: 90vw;
     text-align: center;
     font-weight: 600;
 }
