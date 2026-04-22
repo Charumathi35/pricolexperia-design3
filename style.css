@@ -115,6 +115,7 @@ a.explore-btn:hover {
     z-index: 2;
     /* Above overlay */
     flex-wrap: wrap;
+    transform: translateY(-8vh); /* Moves content slightly above across all devices */
 }
 
 .hero-left {
@@ -156,7 +157,8 @@ a.explore-btn:hover {
 /* Scroll to Explore Indicator */
 .scroll-explore {
     position: absolute;
-    bottom: 140px; /* Moved up to clear the navigation bar and slightly upside */
+    bottom: 140px;
+    /* Moved up to clear the navigation bar and slightly upside */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -204,13 +206,16 @@ a.explore-btn:hover {
         transform: translateY(0);
         opacity: 0;
     }
+
     20% {
         opacity: 1;
     }
+
     50% {
         transform: translateY(12px);
         opacity: 1;
     }
+
     100% {
         transform: translateY(12px);
         opacity: 0;
@@ -784,7 +789,8 @@ h2.footer-title {
 }
 
 .nav-icon-img {
-    width: 42px; /* Balanced size for better fit */
+    width: 42px;
+    /* Balanced size for better fit */
     height: 42px;
     object-fit: contain;
     filter: invert(1) brightness(2);
