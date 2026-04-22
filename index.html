@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricol Experia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="brand-nav hidden">
+        <div class="brand-nav-item" data-brand="0">
+            <div class="nav-icon-box travel-icon">
+                <img src="images/navtravel.png" class="nav-icon-img" alt="Travel">
+            </div>
+            <span class="nav-label">Travel</span>
+        </div>
+
+        <div class="brand-nav-item" data-brand="1">
+            <div class="nav-icon-box gourmet-icon">
+                <img src="images/navgourmet.png" class="nav-icon-img" alt="Gourmet">
+            </div>
+            <span class="nav-label">Gourmet</span>
+        </div>
+
+        <div class="brand-nav-item" data-brand="2">
+            <div class="nav-icon-box holidays-icon">
+                <img src="images/navholidays.png" class="nav-icon-img" alt="Holidays">
+            </div>
+            <span class="nav-label">Holidays</span>
+        </div>
+
+        <div class="brand-nav-item" data-brand="3">
+            <div class="nav-icon-box dvara-icon">
+                <img src="images/image (1).png" class="nav-icon-img" alt="Dvara">
+            </div>
+            <span class="nav-label">Dvara</span>
+        </div>
+
+        <div class="brand-nav-item" data-brand="4">
+            <div class="nav-icon-box bluorb-icon">
+                <img src="images/navbluorb.png" class="nav-icon-img" alt="BluOrb">
+            </div>
+            <span class="nav-label">BluOrb</span>
+        </div>
+    </nav>
+    <!-- Sections 
+         Strategy: Use the 'wipe' effect. 
+         'Before' image: A slightly dimmed or grayscale version (or just dark bg).
+         'After' image: The full color premium image.
+         Since I only have one image, I will use a dark overlay div as the 'before' state, 
+         and the image as the 'after' state.
+    -->
+
+    <div class="scroll-container">
+
+        <!-- 0. Intro Section (now part of the scroll sequence) -->
+        <!-- 0. Intro Section -->
+        <section class="comparisonSection" id="intro-wrap">
+            <div class="hero-section" id="hero">
+                <div class="bg-image-container">
+                    <img src="images/intro.jpg" alt="Pricol Experia" class="bg-image">
+                </div>
+                <!-- Full Page Tint Overlay -->
+                <!-- <div class="hero-overlay"></div> -->
+                <div class="hero-content">
+                    <div class="hero-left">
+                        <div class="logo-container">
+                            <img src="images/experialogo.png" alt="Pricol Experia" class="site-logo">
+                        </div>
+                        <p class="hero-description">Pricol Experia is the lifestyle and hospitality wing of the
+                            Pricol
+                            Group,
+                            serving as a unified gateway to premium experiences. By integrating the unique strengths
+                            of
+                            Pricol
+                            Travel, Pricol Gourmet, Pricol Holidays, Pricol Dvara, and BluOrb, we offer a 360-degree
+                            approach to
+                            luxury, leisure, and service.</p>
+                    </div>
+                </div>
+                <div class="scroll-explore" onclick="scrollToFirstBrand()">
+                    <span class="scroll-text">Scroll to Explore</span>
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1.Travel -->
+        <section class="comparisonSection" id="travel">
+            <div class="comparisonImage beforeImage">
+                <img src="images/pricoltravel.png" style="filter: grayscale(100%) brightness(0.2);" alt="dark-bg">
+            </div>
+            <div class="comparisonImage afterImage">
+                <img src="images/pricoltravel.png" alt="Travel">
+            </div>
+            <div class="text-overlay-container">
+                <div class="text-content">
+                    <div class="brand-card-logo">
+                        <img src="images/travellogo.png" alt="Pricol Travel Logo">
+                    </div>
+                    <div class="text-middle-wrap">
+                        <p>At Pricol Travel, our passion for exploration drives us to create unforgettable experiences
+                            tailored just for you. As a trusted leader in the travel and tourism sector, we offer a
+                            diverse
+                            range of services, including Business Travel, Leisure Travel, and MICE (Meetings,
+                            Incentives,
+                            Conferences, and Exhibitions).</p>
+                    </div>
+                    <a href="https://www.pricoltravel.com/" target="_blank" class="explore-btn">Explore</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2.Gourmet -->
+        <section class="comparisonSection" id="gourmet">
+            <div class="comparisonImage beforeImage">
+                <img src="images/Pricol_gourmet.jpg" style="filter: grayscale(100%) brightness(0.2);" alt="dark-bg">
+            </div>
+            <div class="comparisonImage afterImage">
+                <img src="images/Pricol_gourmet.jpg" alt="Gourmet">
+            </div>
+            <div class="text-overlay-container">
+                <div class="text-content">
+                    <div class="brand-card-logo">
+                        <img src="images/gourmetlogo.png" alt="Pricol Gourmet Logo">
+                    </div>
+                    <div class="text-middle-wrap">
+                        <p>Curated, thought-provoking and gastronomically driven, Pricol Gourmet is a Chennai-based
+                            hospitality enterprise founded in 2017. We have decades of experience in the hospitality
+                            industry with our footprint is in Chennai, Delhi, Pune, Kochi & Coimbatore.</p>
+
+                        <div class="gourmet-logos-grid">
+                            <img src="images/Savya-Rasa-logo.png" alt="Savya Rasa">
+                            <img src="images/soy_soi.png" alt="Soy Soi">
+                            <img src="images/little-soi.png" alt="Little Soi">
+                            <img src="images/delish.png" alt="Delish">
+                            <img src="images/DOU_WHITE.png" alt="Dou">
+                            <img src="images/Austin-Logo-new.png" alt="Austin">
+                            <img src="images/Punjab-club.png" alt="Punjab Club">
+                            <img src="images/Rasanai-logo.png" alt="Rasanai">
+                            <img src="images/The-Catering-&Co-final.png" alt="The Catering Co">
+                            <!-- <img src="images/origin.png" alt="Origin"> -->
+                        </div>
+                    </div>
+
+                    <a href="https://www.pricolgourmet.com/" target="_blank" class="explore-btn">Explore</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3.Holidays -->
+        <section class="comparisonSection" id="holidays">
+            <div class="comparisonImage beforeImage">
+                <img src="images/pricolholidays.png" style="filter: grayscale(100%) brightness(0.2);" alt="dark-bg">
+            </div>
+            <div class="comparisonImage afterImage">
+                <img src="images/pricolholidays.png" alt="Holidays">
+            </div>
+            <div class="text-overlay-container">
+                <div class="text-content">
+                    <div class="brand-card-logo">
+                        <img src="images/holidayslogo.png" alt="Pricol Holidays Logo">
+                    </div>
+                    <div class="text-middle-wrap">
+                        <p> A magical theme-park getaway.</p>
+                    </div>
+                    <a href="https://pricolholidays.com/" target="_blank" class="explore-btn">Explore</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4.Dvara -->
+        <section class="comparisonSection" id="dvara">
+            <div class="comparisonImage beforeImage">
+                <img src="images/Pricol_Dvara.jpg" style="filter: grayscale(100%) brightness(0.2);" alt="dark-bg">
+            </div>
+            <div class="comparisonImage afterImage">
+                <img src="images/Pricol_Dvara.jpg" alt="Dvara">
+            </div>
+            <div class="text-overlay-container">
+                <div class="text-content">
+                    <div class="brand-card-logo">
+                        <img src="images/Dvara_logo.png" alt="Pricol Dvara Logo">
+                        <h3><span class="text-division"><b>(Division of Pricol Experia)</b></span></h3>
+                    </div>
+                    <div class="text-middle-wrap">
+                        <p>Enter the doors of serenity with DVARA, a chain of luxury retreats designed to create
+                            “Crafted
+                            Experiences in Soulful Spaces”. Derived from the Sanskrit word for a gateway, DVARA opens
+                            doors
+                            to exceptional experiences rooted in the culture of the terrain. Wake up to the chirping of
+                            birds, bask in the brilliance of sunshine, savour the delectable cuisine and delight in the
+                            diverse experiences that DVARA has to offer. Travel takes a new dimension here as you enjoy
+                            the
+                            moments in this natural paradise and make a montage of memories. At DVARA, exploration is a
+                            way
+                            of life and we welcome you to enter the haven of indulgence and unparalleled
+                            hospitality.
+                        </p>
+
+                        <span>
+                            <a href="https://siruvani.dvara.in/" target="_blank" class="text-link">Siruvani </a>
+                            |
+                            <a href="https://kodaikanal.dvara.in/" target="_blank" class="text-link">Kodaikanal</a>
+                        </span>
+                    </div>
+
+                    <a href="https://dvara.in/" target="_blank" class="explore-btn">Explore</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5.Bluorb -->
+        <section class="comparisonSection" id="bluorb">
+            <div class="comparisonImage beforeImage">
+                <img src="images/bluorb.jpg" style="filter: grayscale(100%) brightness(0.2);" alt="dark-bg">
+            </div>
+            <div class="comparisonImage afterImage">
+                <img src="images/bluorb.jpg" alt="Bluorb">
+            </div>
+            <div class="text-overlay-container">
+                <div class="text-content">
+                    <div class="brand-card-logo">
+                        <img src="images\Blu-Orb-logo.png" alt="Pricol Bluorb Logo">
+                    </div>
+                    <div class="text-middle-wrap">
+                        <p>Welcome to unrivalled comfort and a lasting sense of exclusivity.
+                            Experience art, architecture, history and music.
+                            The untouched wilderness. And diverse civilisations.
+                            Experience the world like you’ve never before.
+                            Experience it with Blu Orb.</p>
+                    </div>
+                    <a href="https://bluorb.in/" target="_blank" class="explore-btn">Explore</a>
+                </div>
+            </div>
+        </section>
+
+
+
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2 class="footer-title">Pricol Experia</h2>
+            <div class="footer-info">
+                <div class="info-item">
+                    <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                    </svg>
+                    <span>CPM TOWERS, 109, RACE COURSE, COIMBATORE - 641018, INDIA</span>
+                </div>
+                <div class="info-item">
+                    <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.33 8.5 5.14 8.5 3.91 8.5 3.4 8.1 3 7.6 3H4.12C3.6 3 3 3.47 3 4.5 3 14.16 10.84 22 20.5 22c1.03 0 1.5-.6 1.5-1.12v-3.48c0-.5-.4-1.02-1.99-1.02z" />
+                    </svg>
+                    <span>0422 433 2700</span>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Pricol Experia. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" id="scrollToTopBtn" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
