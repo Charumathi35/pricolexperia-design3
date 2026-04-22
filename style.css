@@ -164,7 +164,7 @@ a.explore-btn:hover {
     cursor: pointer;
     z-index: 10;
     transition: all 0.3s ease;
-    margin-bottom: 8vh; /* Stays above nav */
+    margin-bottom: 12vh; /* Moved slightly upwards, stays well above nav */
 }
 
 .scroll-explore:hover {
