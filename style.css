@@ -81,11 +81,12 @@ a.explore-btn:hover {
     min-height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    padding: 0 5%;
+    padding: 0 5% 180px 5%; /* Padding bottom ensures content never overlaps with scroll-explore */
 }
 
 .hero-section .bg-image-container {
@@ -115,7 +116,6 @@ a.explore-btn:hover {
     z-index: 2;
     /* Above overlay */
     flex-wrap: wrap;
-    transform: translateY(-8vh); /* Moves content slightly above across all devices */
 }
 
 .hero-left {
@@ -182,28 +182,26 @@ a.explore-btn:hover {
     font-weight: 400;
 }
 
-.scroll-mouse {
-    width: 26px;
-    height: 42px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 12px;
+.scroll-line-container {
+    height: 40px;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.2);
     position: relative;
-    display: flex;
-    justify-content: center;
+    overflow: hidden;
+    border-radius: 2px;
 }
 
-.scroll-wheel {
-    width: 2px;
-    height: 8px;
+.scroll-line {
+    width: 100%;
+    height: 50%;
     background: #fff;
     border-radius: 2px;
-    margin-top: 8px;
-    animation: scrollWheel 2s ease-in-out infinite;
+    animation: scrollLineAnim 2s ease-in-out infinite;
 }
 
-@keyframes scrollWheel {
+@keyframes scrollLineAnim {
     0% {
-        transform: translateY(0);
+        transform: translateY(-100%);
         opacity: 0;
     }
 
@@ -212,12 +210,12 @@ a.explore-btn:hover {
     }
 
     50% {
-        transform: translateY(12px);
+        transform: translateY(150%);
         opacity: 1;
     }
 
     100% {
-        transform: translateY(12px);
+        transform: translateY(150%);
         opacity: 0;
     }
 }
